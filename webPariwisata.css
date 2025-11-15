@@ -1,0 +1,386 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.smooth {
+    transition: all .3s ease;
+}
+.smalltxt {
+    margin-top: 5px;
+    font-size: x-small;
+}
+.texthover h2:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: rgb(239, 0, 0);
+    text-underline-offset: 6px;
+}
+.cardFormat {
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+}
+.fotoFormat img {
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease;
+    object-fit: cover;
+    display: block;
+}
+.fotohover:hover img {
+    transform: scale(1.05);
+}
+.overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+} 
+
+
+.hero {
+    background-image: url(/Image/tmii_VIEW.png);
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+    
+}
+
+header {
+    background: linear-gradient(to bottom, rgba(105, 105, 105, 0.277), rgba(255,255,255,0)); 
+    backdrop-filter: blur(10px);
+    padding: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logotmii {
+    margin: .5em 0 .5em 1em;
+    height: 20px;
+    width: 50px;
+    display: flex;
+}
+
+header nav {
+    margin: .5em 0 .5em 0em;
+    border: 1.5px solid rgba(255, 255, 255, 0.429);
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+nav ul, nav a {
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+}
+
+header .profile {
+    margin: .5em 1em .5em 0;
+    height: 30px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+header .profile h3, .profile a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.profile:hover, .profile a:hover{
+    transform: scale(1.05); 
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: rgb(239, 0, 0);
+    text-underline-offset: 6px;
+}
+
+.hero .content {
+    font-size: 30px;
+    text-align: left;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+.content span {
+    background-color: rgba(255, 255, 255, 0.138);
+    font-size: small;
+    padding: 10px;
+    border-radius: 45px;
+    align-self: self-start;
+    backdrop-filter: blur(5px); 
+}
+
+.content h1 {
+    line-height: 1;
+}
+
+.content .leftTXT {
+    font-size: small;
+    max-width: 500px;
+}
+
+.hero .content .btn {
+    align-self: flex-start;
+    border-style: none;
+    padding: 10px 20px 12px 20px;
+    margin-top: 20px;
+    border-radius: 50px;
+    background-color: rgb(239, 0, 0);
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.356);
+
+}
+
+.content .btn:hover{
+    background-color:  rgb(255, 74, 74);
+    transform: scale(1.07);
+    cursor: pointer;
+    
+}
+
+.hover:hover {
+    background-color: rgba(255, 255, 255, 0.138);
+    backdrop-filter: blur(5px); 
+    padding: 0 10px;
+    border-radius: 20px;
+}
+
+.mainFoto {
+    min-height: 150vh;
+    margin: 6rem 10rem;
+    height: 250px;
+    
+    display: grid;
+    grid-template-areas: 
+    "asideFoto main-left main-right"
+    "asideFoto main-mid main-mid"
+    "null null null"
+    "asideText main-bottom main-bottom";
+    grid-template-columns: 2fr 1.5fr 1.5fr;
+    grid-template-rows: 1.5fr 2.5fr .5fr 2fr;
+    gap: 2rem;
+}
+
+.mainFoto .asideFoto {
+    grid-area: asideFoto;
+}
+.mainFoto .asideText {
+    grid-area: asideText;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.mainFoto .main-left {
+    grid-area: main-left;
+}
+.mainFoto .main-right {
+    grid-area: main-right;
+}
+.mainFoto .main-mid {
+    grid-area: main-mid;
+}
+
+.mainFoto .main-bottom {
+    grid-area: main-bottom;
+}
+
+.main-bottom iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.mainFoto .textfoto {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.asideText ol {
+    position: relative;
+    left: 1.5rem;
+    font-weight: 500;
+}
+.asideText u {
+    text-decoration-color: rgb(239, 0, 0);
+    text-underline-offset: 6px;
+}
+
+.price-section {
+    background-color: rgb(114, 0, 0);
+    margin: 0 2rem 5rem 2rem;
+    padding: 1px 0 1rem 0;
+    border-radius: 1rem;
+    transition: all .3s ease;
+}
+
+.price-section:hover {
+    background-color:  rgb(125, 0, 0);
+}
+
+.price h1 {
+    color: white;
+    margin: 5rem 0 4rem 0;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color:  rgb(239, 0, 0);
+    text-underline-offset: 6px;
+}
+
+.pricetable {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 0 10rem 0 ;
+    gap: 2rem;
+    border-collapse: collapse;
+}
+
+.pricetable .vehicle {
+    width: 40%;
+    text-align: left;
+    border-radius: .5rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    border:1px solid rgb(255, 255, 255);
+    overflow: hidden;
+    
+}
+.pricetable .entrance {
+    width: 40%;
+    text-align: center;
+    border-radius: .5rem;
+    border-collapse: separate;
+    border-spacing: 0;
+    border:1px solid rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.pricetable td, .pricetable th {
+    border: 1px solid rgb(193, 12, 12);
+    padding: 10px;
+}
+.pricetable th {
+    background-color:  rgb(137, 0, 0);
+    color:rgb(255, 255, 255);
+    text-align: center;
+}
+.pricetable td {
+    background-color: rgb(255, 255, 255);
+    color: rgb(87, 87, 87);
+}
+
+.bgtable td {
+    background-color:   rgb(137, 0, 0);
+    color:rgb(255, 251, 251);
+}
+
+#other-recommendations {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+#other-recommendations h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-color: rgb(239, 0, 0);
+    text-underline-offset: 6px;
+}
+    
+
+.recommendation-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px 0;
+    color: #333;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+footer {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+footer p{
+    margin-top: 5px;
+}
+.profilefoot p {
+    font-size: smaller;
+    margin-top: 10px;
+}
+
